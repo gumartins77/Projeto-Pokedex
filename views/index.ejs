@@ -34,16 +34,16 @@
 
         <form action="/add" method="POST">
           <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" />
+          <input type="text" id="nome" name="nome" required/>
 
           <label for="descricao">Descrição:</label>
-          <input type="text" id="descricao" name="descricao" />
+          <input type="text" id="descricao" name="descricao" required/>
 
           <label for="tipo">Tipo:</label>
-          <input type="text" id="tipo" name="tipo" />
+          <input type="text" id="tipo" name="tipo" required/>
 
           <label for="imagem">Link da Imagem:</label>
-          <input type="text" id="imagem" name="imagem" />
+          <input type="text" id="imagem" name="imagem" required/>
 
           <button id="btnCadastrar" type="submit">Cadastrar</button>
 
@@ -55,16 +55,16 @@
         <form action="/update/<%= pokemon.id %>" method="POST">
 
           <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" value="<%= pokemon.nome%>"/>
+          <input type="text" id="nome" name="nome" value="<%= pokemon.nome%>" required/>
 
           <label for="descricao">Descrição:</label>
-          <input type="text" id="descricao" name="descricao" value="<%= pokemon.descricao%>"/>
+          <input type="text" id="descricao" name="descricao" value="<%= pokemon.descricao%>" required/>
 
           <label for="tipo">Tipo:</label>
-          <input type="text" id="tipo" name="tipo" value="<%= pokemon.tipo%>"/>
+          <input type="text" id="tipo" name="tipo" value="<%= pokemon.tipo%>" required/>
 
           <label for="imagem">Link da Imagem:</label>
-          <input type="text" id="imagem" name="imagem" value="<%= pokemon.imagem%>"/>
+          <input type="text" id="imagem" name="imagem" value="<%= pokemon.imagem%>" required/>
 
           <button id="btnAtualizar" type="submit">Atualizar</button>
 
@@ -85,11 +85,17 @@
           <p>Nº<%= pokemon.id%> </p>
           <p class="descricao"><%= pokemon.descricao %></p>
           <p>Tipo: <%= pokemon.tipo %> </p>
-          <a href= "/detalhes/<%= pokemon.id %>">Editar</a>
+          <a id="editar" href= "/detalhes/<%= pokemon.id %>">Editar</a>
+          <a id="apagar" href= "/delete/<%= pokemon.id %>">Apagar</a>
         </div>
         <% }) %>
       </section>
 
     </main>
+
+    <footer>
+      <p>Todos os direitos reservados para gumartins77 &copy;</p>
+      <p>Dados retirados de <a target="_blank"  href="https://www.pokemon.com/br/pokedex/">Pokédex</a></p>
+    </footer>
   </body>
 </html>

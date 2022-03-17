@@ -77,13 +77,13 @@ section#cards div.card p.descricao {
   margin-bottom: 1rem;
 }
 
-section#cards div.card a {
+section#cards div.card a#editar {
   padding: 0.6rem;
-  width: 20%;
+  width: 30%;
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  font-size: 1rem;
+  font-size: 1.2rem;
   background-color: #fff;
   border: solid 1px #0077ff;
   color: #0077ff;
@@ -91,12 +91,36 @@ section#cards div.card a {
   transition: all 0.3s ease-in-out;
   text-decoration: none;
   margin-top: 2rem;
+  border-radius: 2rem;
 }
 
-section#cards div.card a:hover {
+section#cards div.card a#editar:hover {
   background-color: #0077ff;
   color: #fff;
 }
+
+section#cards div.card a#apagar {
+  padding: 0.6rem;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  background-color: #fff;
+  border: solid 1px red;
+  color: red;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  margin-top: 1rem;
+  border-radius: 2rem;
+}
+
+section#cards div.card a#apagar:hover {
+  background-color: red;
+  color: #fff;
+}
+
 
 section#cadastro {
   display: flex;
@@ -135,19 +159,42 @@ section#cadastro form label {
 
 section#cadastro form button {
   padding: 0.6rem;
-  width: 20%;
+  width: 30%;
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  font-size: 1rem;
+  font-size: 1.5rem;
   background-color: #fff;
   border: solid 1px red;
   color: red;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  border-radius: 2rem;
 }
 
 section#cadastro form button:hover {
   background-color: red;
   color: #fff;
+}
+
+footer {
+  background-color: #0077ff;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer p {
+  width: 100%;
+  color: #fff;
+  text-align:center ;
+  font-size: 1.2rem;
+  padding: .3rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
 }

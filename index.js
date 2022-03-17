@@ -73,4 +73,10 @@ app.post("/update/:id", (req, res) => {
   res.redirect("/#cards");
 });
 
+app.get("/delete/:id", (req, res) => {
+  const id = +req.params.id - 1;
+  delete pokedex[id];
+  res.redirect("/#cards");
+})
+
 app.listen(3000, () => console.log("Servidor rodando em http://localhost3000"));
