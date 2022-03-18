@@ -67,6 +67,11 @@ section#cards div.card {
   margin: 3rem 0 5rem 0;
 }
 
+section#cards div.card a {
+  text-decoration: none;
+  color: black;
+}
+
 section#cards div.card img {
   width: 100%;
 }
