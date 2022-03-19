@@ -4,132 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <title>Pokédex</title>
   </head>
   <body>
     <nav>
       <ul>
-        <li><img src="/img/pokebola.png" alt="Pokébola"></li>
+        <li><img src="/img/pokebola.png" alt="Pokébola" /></li>
         <li>
-        <a href="/"><h1>Pokédex</h1></a>
+          <a href="/"><h1>Pokédex</h1></a>
         </li>
-        <li><a href="#cadastro">Cadastro</a> </li>
-        <li><a href="#cards">Pokémons</a> </li>
+        <li><a href="#cadastro">Cadastro</a></li>
+        <li><a href="#cards">Pokémons</a></li>
       </ul>
     </nav>
 
     <header>
-      <img src="/img/bunner4.jpg" alt="Bunner">
+      <img src="/img/bunner4.jpg" alt="Bunner" />
     </header>
 
     <main>
-      <section id="cadastro">
-
-        <img src="/img/pokedex-img.webp" alt="Pokédex">
-
-        <div>
-        <% if (pokemon==undefined) { %>
-        <h2>Cadatre um novo Pokémon</h2>
-
-        <form action="/cadastro" method="POST">
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" required/>
-
-          <label for="numero">Numero:</label>
-          <input type="text" id="numero" name="numero" required/>
-
-          <label for="tipo">Tipo:</label>
-          <input type="text" id="tipo" name="tipo" required/>
-
-          <label for="imagem">Link da Imagem:</label>
-          <input type="text" id="imagem" name="imagem" required/>
-
-          <label for="descricao">Descrição:</label>
-          <input type="text" id="descricao" name="descricao" required/>
-
-          <label for="altura">Altura:</label>
-          <input type="text" id="altura" name="altura" required/>
-
-          <label for="altura">Peso:</label>
-          <input type="text" id="peso" name="peso" required/>
-
-          <label for="altura">Categoria:</label>
-          <input type="text" id="categoria" name="categoria" required/>
-
-          <label for="altura">Habilidade:</label>
-          <input type="text" id="habilidade" name="habilidade" required/>
-
-          <button id="btnCadastrar" type="submit">Cadastrar</button>
-
-        </form>
-        <% } else { %>
-
-          <h2>Atualização do Pokémon</h2>
-
-        <form action="/update/<%= pokemon.id %>" method="POST">
-
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" value="<%= pokemon.nome%>" required/>
-
-          <label for="numero">Número:</label>
-          <input type="text" id="numero" name="numero" value="<%= pokemon.numero%>" required/>
-
-          <label for="tipo">Tipo:</label>
-          <input type="text" id="tipo" name="tipo" value="<%= pokemon.tipo%>" required/>
-
-          <label for="imagem">Link da Imagem:</label>
-          <input type="text" id="imagem" name="imagem" value="<%= pokemon.imagem%>" required/>
-
-          <label for="descricao">Descrição:</label>
-          <input type="text" id="descricao" name="descricao" value="<%= pokemon.descricao%>" required/>
-
-          <label for="altura">Altura:</label>
-          <input type="text" id="altura" name="altura" value="<%= pokemon.altura%>" required/>
-
-          <label for="peso">Peso:</label>
-          <input type="text" id="peso" name="peso" value="<%= pokemon.peso%>" required/>
-
-          <label for="categoria">Categoria:</label>
-          <input type="text" id="categoria" name="categoria" value="<%= pokemon.categoria%>" required/>
-
-          <label for="habilidade">Habilidade:</label>
-          <input type="text" id="habilidade" name="habilidade" value="<%= pokemon.habilidade%>" required/>
-
-          <button id="btnAtualizar" type="submit">Atualizar</button>
-
-        </form>
-        <% } %>
-      </div>
-
-      </section>
-
       <section id="cards">
-        
         <h2>Lista de Pokémons</h2>
 
         <% pokedex.forEach((pokemon) => { %>
         <div class="card">
-          <h3><%= pokemon.nome%> </h3>
-          <p>Nº<%= pokemon.numero%> </p>
-          <img src="<%= pokemon.imagem %>" alt="" />
-          <p class="descricao"><%= pokemon.descricao %></p>
-          <p>Altura: <%= pokemon.altura %> m </p>
-          <p>Peso: <%= pokemon.peso %> kg </p>
-          <p>Categoria: <%= pokemon.categoria %> </p>
-          <p>Habilidade: <%= pokemon.habilidade %> </p>
-          <p>Tipo: <%= pokemon.tipo %> </p>
-          <a id="editar" href= "/detalhes/<%= pokemon.id %>">Editar</a>
-          <a id="apagar" href= "/delete/<%= pokemon.id %>">Apagar</a>
+          <a href="/detalhes/<%= pokemon.id %>">
+            <p>ID: <%= pokemon.id%></p>
+            <span>
+            <h3><%= pokemon.name%></h3>
+            <p>Nº<%= pokemon.num%></p>
+            </span>
+            <img src="<%= pokemon.img %>" alt="" />
+            <p id="tipo">Tipo: <%= pokemon.type %></p>
+            </a>
         </div>
         <% }) %>
       </section>
-
     </main>
 
     <footer>
       <p>Todos os direitos reservados para gumartins77 &copy;</p>
-      <p>Dados retirados de <a target="_blank"  href="https://www.pokemon.com/br/pokedex/">Pokédex</a></p>
+      <p>
+        Dados retirados de
+        <a target="_blank" href="https://www.pokemon.com/br/pokedex/"
+          >Pokédex</a
+        >
+      </p>
     </footer>
   </body>
 </html>
