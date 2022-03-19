@@ -14,41 +14,33 @@
         <li>
           <a href="/"><h1>Pokédex</h1></a>
         </li>
-        <li><a href="#cadastro">Cadastro</a></li>
-        <li><a href="#cards">Pokémons</a></li>
       </ul>
     </nav>
 
     <header>
-      <img src="/img/bunner4.jpg" alt="Bunner" />
+      <img src="/img/bunner.webp" alt="Bunner" />
     </header>
 
     <main>
       <section id="cards">
-      <div class="card">
+        <div class="card">
+          <p>ID: <%= pokemon.id%></p>
+          <span>
             <h3><%= pokemon.name%></h3>
-            <span><p>Nº<%= pokemon.num%></p>
-            <p>ID: <%= pokemon.id%></p>
-            </span>
-            <img src="<%= pokemon.img %>" alt="" />
-            <!-- <p class="descricao"><%= pokemon.descricao %></p> -->
-            <p>Altura: <%= pokemon.height %> </p>
-            <p>Peso: <%= pokemon.weight %> </p>
-            <p>Categoria: <%= pokemon.categoria %></p>
-            <p>Habilidade: <%= pokemon.habilidade %></p>
-            <p id="tipo">Tipo: <%= pokemon.type %></p>
-            <a href="/" id="voltar">Voltar para tela principal</a>
-            </div>
-          </section>
-        </main>
+            <p>Nº<%= pokemon.num%></p>
+          </span>
+          <img src="<%= pokemon.img %>" alt="" />
+          <p>Altura: <%= pokemon.height %></p>
+          <p>Peso: <%= pokemon.weight %></p>
+          <p>Categoria: <%= pokemon.categoria %></p>
+          <p>Habilidade: <%= pokemon.habilidade %></p>
+          <p id="tipo">Tipo: <%= pokemon.type %></p>
+          <a href="/" id="voltar">Voltar para tela principal</a>
+        </div>
+      </section>
+    </main>
     <footer>
       <p>Todos os direitos reservados para gumartins77 &copy;</p>
-      <p>
-        Dados retirados de
-        <a target="_blank" href="https://www.pokemon.com/br/pokedex/"
-          >Pokédex</a
-        >
-      </p>
     </footer>
   </body>
 </html>
