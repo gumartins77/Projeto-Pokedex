@@ -23,18 +23,25 @@
 
     <main>
       <section id="cards">
+        <h2>Detalhes do Pokémon</h2>
         <div class="card">
-          <p>ID: <%= pokemon.id%></p>
-          <span>
-            <h3><%= pokemon.name%></h3>
+          <header>
+            <p>ID: <%= pokemon.id%></p>
             <p>Nº<%= pokemon.num%></p>
-          </span>
+          </header>
+          <h3><%= pokemon.name%></h3>
           <img src="<%= pokemon.img %>" alt="" />
-          <p>Altura: <%= pokemon.height %></p>
-          <p>Peso: <%= pokemon.weight %></p>
-          <p>Categoria: <%= pokemon.categoria %></p>
-          <p>Habilidade: <%= pokemon.habilidade %></p>
-          <p id="tipo">Tipo: <%= pokemon.type %></p>
+          <div id="informacoes">
+            <p>Height: </p>
+            <p>Weight: </p>
+          </div>
+          <div id="resultados">
+            <p><%= pokemon.height %></p>
+            <p><%= pokemon.weight %></p>
+          </div>
+          <div id="footer">
+            <h4>Type: <%= pokemon.type %></h4>
+          </div>
           <a href="/" id="voltar">Voltar para tela principal</a>
         </div>
       </section>

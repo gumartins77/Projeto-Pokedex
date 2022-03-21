@@ -64,16 +64,18 @@ section#cards {
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin-top: 5rem;
+  color: rgb(249, 251, 252); 
 }
 
 section#cards h2 {
   width: 100%;
   text-align: center;
+  font-size: 2.5rem;
 }
 
 section#cards div.card {
   width: 20rem;
-  box-shadow: 5px 5px 5px 5px #00000015;
+  box-shadow: 20px 20px 20px 20px #00000015;
   padding: 1rem;
   margin: 3rem 0 5rem 0;
   border-radius: 2rem;
@@ -81,40 +83,56 @@ section#cards div.card {
 
 section#cards div.card:hover {
   transition: all 0.4s ease-out;
-  /* background-color: #f8d2d8; */
   transform: scale(1.1);
-}
-
-section#cards div.card span {
-  margin-top: 1rem;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
 }
 
 section#cards div.card a {
   text-decoration: none;
-  color: black;
+  color: rgb(249, 251, 252); 
+}
+
+section#cards div.card header {
+  margin-top: 1rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 1.3rem;
+}
+
+section#cards div.card h3 {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
 }
 
 section#cards div.card img {
   width: 100%;
 }
-section#cards div.card h3 {
-  margin-bottom: 1rem;
+
+section#cards div.card div#informacoes {
+  display: flex;
+  justify-content: space-between;
+  padding: .2rem;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
-section#cards div.card p#tipo {
-  width: 100%;
-  padding: 0.3rem;
-  border: 1px solid black;
-  border-radius: 0.6rem;
-  background-color: rgb(150, 236, 252);
-  color: black;
+section#cards div.card div#resultados {
+  display: flex;
+  justify-content: space-between;
+  padding: .2rem;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+section#cards div.card div#footer {
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
-  font-size: 1rem;
+  margin-top: 2rem;
 }
 
 section#cards div.card a#voltar {

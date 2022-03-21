@@ -28,20 +28,22 @@
         <% pokedex.forEach((pokemon) => { %>
         <div class="card">
           <a href="/detalhes/<%= pokemon.id %>">
+            <header>
             <p>ID: <%= pokemon.id%></p>
-            <span>
-            <h3><%= pokemon.name%></h3>
             <p>Nº<%= pokemon.num%></p>
-            </span>
+            </header>
+            <h3><%= pokemon.name%></h3>
             <img src="<%= pokemon.img %>" alt="" />
-            <p id="tipo">Tipo: <%= pokemon.type %></p>
+            <div id="footer">
+            <h4 id="tipo">Type: <%= pokemon.type %></h4>
+            </div>
             </a>
         </div>
         <% }) %>
       </section>
     </main>
-    <!-- <footer>
+    <footer>
       <p>Todos os direitos reservados para gumartins77 &copy;</p>
-    </footer> -->
+    </footer>
   </body>
 </html>

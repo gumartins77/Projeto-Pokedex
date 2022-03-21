@@ -4100,56 +4100,19 @@ const pokedexObj = {
 
 const pokedex = pokedexObj.pokemon
 
-// Criar minhas rotas
 app.get('/', (req, res) => {
   res.render('index', { pokedex })
 });
 
-// app.get("/", (req, res) => {
-//   res.render("index", { pokedex, pokemon });
-// });
-
-// app.get("/cadastro", (req, res) => {
-//   res.render("cadastro", { pokedex, pokemon });
-// });
-
 app.get("/detalhes", (req, res) => {
   res.render("detalhes", { pokedex });
 });
-
-// app.get("/pokemon/:id", (req, res) => {
-//   const escolhido = +req.params.id;
-//   pokemon = pokedex.find(pokemon => pokemon.id === escolhido);
-//   res.render("pokemon", { pokedex, pokemon });
-// });
-
-// app.post("/cadastro", (req, res) => {
-//   const pokemon = req.body;
-//   pokemon.id = pokedex.length + 1;
-//   pokedex.push(pokemon);
-//   res.redirect("/detalhes#cards");
-// });
 
 app.get("/detalhes/:id", (req, res) => {
   const id = +req.params.id;
   pokemon = pokedex.find((pokemon) => pokemon.id === id);
   res.redirect("/detalhes");
 });
-
-// app.post("/update/:id", (req, res) => {
-//   const id = +req.params.id - 1;
-//   const newPokemon = req.body;
-//   newPokemon.id = id + 1;
-//   pokedex[id] = newPokemon;
-//   pokemon = undefined;
-//   res.redirect("/detalhes#cards");
-// });
-
-// app.get("/delete/:id", (req, res) => {
-//   const id = +req.params.id - 1;
-//   delete pokedex[id];
-//   res.redirect("/detalhes#cards");
-// });
 
 app.listen(port, () =>
   console.log(`Servidor rodando em http://localhost:${port}`)
