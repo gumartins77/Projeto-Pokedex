@@ -13,5 +13,5 @@ Node.JS;
 
 # Personal
 Gustavo Martins 
-<a href = "gugumartin77@gmail.com"> gugumartin77@gmail.com</a>
+<a href = "mailto:gugumartin77@gmail.com"> gugumartin77@gmail.com</a>
 <a> gustavomartins.linkdin</a>
