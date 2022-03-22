@@ -1,7 +1,7 @@
 {
   "name": "pokedex-mvc",
   "version": "1.0.0",
-  "description": "Projeto MVC de uma pokedex",
+  "description": "Projeto de uma pokedex",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gumartins77/pokedex-mvc.git"
+    "url": "git+https://github.com/gumartins77/Projeto-Pokedex.git"
   },
   "author": "Gustavo Martins",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gumartins77/pokedex-mvc/issues"
+    "url": "https://github.com/gumartins77/Projeto-Pokedex/issues"
   },
-  "homepage": "https://github.com/gumartins77/pokedex-mvc#readme",
+  "homepage": "https://github.com/gumartins77/Projeto-Pokedex#readme",
   "dependencies": {
     "dotenv": "^16.0.0",
     "ejs": "^3.1.6",

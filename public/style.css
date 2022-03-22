@@ -160,13 +160,13 @@ section#cards div.card a#voltar:hover {
 footer {
   width: 100%;
   background-color: #0077ff;
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-footer p {
+footer a {
   width: 100%;
   color: #fff;
   text-align: center;
